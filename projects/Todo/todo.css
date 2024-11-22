@@ -124,11 +124,11 @@ section {
   }
   
   .todo-item {
-    margin: 2.4rem;
+    /* margin: 2.4rem; */
     /*word-wrap: break-word;
       */ /*flex-wrap: wrap;
       */
-    font-size: 20px;
+    /* font-size: 20px;
     color: #1c2833;
     border-radius: 30px;
     transition: background-color 200ms ease-in-out;
@@ -141,9 +141,20 @@ section {
     justify-content: start;
     gap: 1.6rem;
     align-items: center;
-    /* align-items: center;
-      */ /*wrapsthelinks*/
-    overflow-wrap: anywhere;
+    overflow-wrap: anywhere; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 24px;
+        background-color: #f2f3f4;
+        align-items: center;
+        border-radius: 40px;
+        transition: background-color 200ms ease-in-out;
+        margin-bottom: 10px;
+
+
   }
   
   li span {
@@ -153,7 +164,11 @@ section {
   
   .check-btn,
   .delete-btn {
-    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
     cursor: pointer;
     width: 3rem;
     height: 3rem;
@@ -204,4 +219,55 @@ section {
 }
 span {
     font-size: 2rem;
+}
+
+@media screen and (max-width : 500px) {
+  section h1  {
+    font-size: 1rem;
+  }
+  .date-time {
+    font-size: 1.1rem;
+    margin-bottom: 0px;
+  }
+  form input {
+    padding: 8px;
+    font-size: 1rem;
+  }
+  form button {
+    padding: 6.9px;
+  }
+  form {
+    width: auto;
+    padding: 0px 30px;
+  }
+  span {
+    font-size: 1rem;
+  }
+  .check-btn,
+  .delete-btn  {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+  }
+  .todo-item  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 24px;
+        background-color: #f2f3f4;
+        align-items: center;
+        border-radius: 40px;
+        transition: background-color 200ms ease-in-out;
+        margin-bottom: 10px;
+  }
+  .clear-btn {
+    font-size: 0.8rem;
+    padding: 9px 12px;
+    color: #fff;
+  } 
+  ul {
+    padding: 0 ;
+  }
 }
